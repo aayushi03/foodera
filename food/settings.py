@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'authentication',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -54,7 +55,7 @@ ROOT_URLCONF = 'food.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'authentication/templates')]
+        'DIRS': [os.path.join(BASE_DIR, 'authentication1/templates')]
         ,
         'APP_DIRS': True,
         'OPTIONS': {
@@ -76,8 +77,12 @@ WSGI_APPLICATION = 'food.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'foodera',
+        'USER': 'master_food',
+        'PASSWORD': 'terabithia',
+        'HOST': 'food.cdwriszzcjdv.us-east-2.rds.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
