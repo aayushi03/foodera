@@ -26,6 +26,6 @@ class Food_list(models.Model):
         choices = TYPE_OF_FOOD,
         default ='other',
     )
-    image = models.FileField(upload_to="E:\photographs\paintings\aaa.jpg",blank= True)
-    desc = models.CharField(max_length=200)
+    image = models.FileField(blank= True)
+    desc = models.TextField(max_length=200)
     price = models.IntegerField(default=0)
