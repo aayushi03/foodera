@@ -17,7 +17,10 @@ class Food_list(models.Model):
         ('indian', 'Indian'),
         ('mexican', 'Mexican'),
         ('italian', 'Italian'),
-        ('others', 'Others')
+        ('thai', 'Thai'),
+        ('french' , 'French'),
+        ('greek' , 'Greek'),
+        ('others', 'Others'),
     )
 
     name = models.CharField(max_length=100)
